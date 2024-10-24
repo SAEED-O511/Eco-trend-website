@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg sticky-top" >
+  <div class="container">
+    
+    
+    <a class="navbar-brand" (click)="navigateTo('/home')"><img src="./assets/imgGallery/logo.png" alt="logo" width="120px" height="65px" /></a>
+    <!-- Toggle button for mobile -->
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Navbar Links -->
+    <div [ngClass]="{ 'collapse': isNavbarCollapsed, 'navbar-collapse': true }">
+      <ul class="navbar-nav mb=2 m-lg-0">
+       
+        <li class="nav-item">
+          <a class="nav-link p-2  p-lg-3 active" aria-current="page" (click)="navigateTo('/home')">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link p-2 p-lg-3 " (click)="navigateTo('/about')">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link p-2 p-lg-3 " (click)="navigateTo('/products')">Store</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" (click)="navigateTo('/cart')">Cart</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link p-2 p-lg-3 " (click)="navigateTo('/category')">Category</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+    <!-- Login Button, cart, credit -->
+    <div class="svgIcon">
+      <button class="btn btn-outline-warning rounded-pill" type="button" style="width:100px;" (click)="navigateTo('/login')">Join Now</button>
+      <button class="btn btn-outline-warning cart-icon  " type="button" (click)="navigateTo('/cart')">
+        <ng-container *ngIf="useIcon; else svgIcon">
+          <i class="fas fa-shopping-cart" style="color: goldenrod;"></i>
+          <span *ngIf="cartItemCount > 0" class="badge rounded-badge">{{ cartItemCount }}</span>
+        </ng-container>
+        <ng-template #svgIcon>
+          <svg class="svg-inline--fa fa-cart-shopping" style="color: goldenrod; font-size: 30px;" aria-hidden="true"
+            focusable="false" data-prefix="fas" data-icon="cart-shopping" role="img" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 576 512">
+            <!-- SVG content here -->
+          </svg>
+          <span *ngIf="cartItemCount > 0" class="badge rounded-badge">{{ cartItemCount }}</span>
+        </ng-template>
+      </button>
+      <button class="btn btn-outline-warning  " type="button" (click)="navigate()">
+        <ng-container *ngIf="useIcon; else svgIcon">
+          <i class="fa fa-credit-card" style="color: goldenrod;"></i>
+        </ng-container>
+        <ng-template #svgIcon>
+          <svg class="svg-inline--fa fa-cart-shopping" style="color: goldenrod; font-size: 30px;" aria-hidden="true"
+            focusable="false" data-prefix="fas" data-icon="cart-shopping" role="img" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 576 512">
+            <!-- SVG content here -->
+          </svg>
+        </ng-template>
+      </button>
+    </div>
+  
+</nav>

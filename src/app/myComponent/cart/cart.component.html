@@ -1,0 +1,29 @@
+<div class="cart-container">
+    <h2 *ngIf="cartItems.length > 0">Cart Items:</h2>
+    <div *ngIf="cartItems.length === 0" class="empty-cart">
+        <p><img src="assets/imgGallery/empty cart.jfif" alt="Empty cart" class="empty-cart-image"></p>
+    </div>
+    <div *ngIf="cartItems.length > 0" class="cart-items-container">
+        <div *ngFor="let item of cartItems; trackBy: trackByFn" class="cart-item">
+            <img [src]="getSafeUrl(item.images[0])" alt="{{ item.title }}" class="product-image">
+            <div class="item-details">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+                <p>{{ item.price | currency:'EGP' }}</p>
+                <div class="quantity-controls">
+                    <button (click)="decrementQuantity(item)">-</button>
+                    <span>{{ item.quantity }}</span>
+                    <button (click)="incrementQuantity(item)">+</button>
+                    <div class="remove-button-container">
+                        <button (click)="removeItem(item)" class="remove-button">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart-total">
+        <h3 *ngIf="cartItems.length > 0">Total Amount: {{ totalAmount | currency:'EGP' }}</h3>
+    </div>
+</div>

@@ -1,0 +1,133 @@
+/* General Styling */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #ffffff; /* White text */
+    background-color: #555551d2; /* Black background */
+      }
+  
+  .about-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .about-header h1 {
+    color: #d4af37; /* Gold text */
+    font-size: 3rem;
+  }
+  
+  .about-header p {
+    color: #ffffff; /* White text */
+    font-size: 1.5rem;
+  }
+  
+  /* Grid Container for Carousel */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .grid-item {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #d4af37; /* Gold border around images */
+    box-shadow: 0px 4px 10px rgba(212, 175, 55, 0.5); /* Gold shadow */
+  }
+  
+  /* Carousel Buttons */
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(1); /* Makes the control icons visible on dark background */
+  }
+  
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Darker background for buttons */
+    border-radius: 50%;
+    padding: 10px;
+  }
+  
+  /* About Description */
+  .about-description {
+    background-color: #111111; /* Dark gray/black background for description */
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #d4af37; /* Gold border */
+  }
+  
+  .about-description h2 {
+    color: #d4af37; /* Gold headings */
+  }
+  
+  .about-description p, ul {
+    color: #f5f5f5; /* Light white/gray text */
+  }
+  
+  .about-description ul li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .about-description ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #d4af37; /* Gold bullet points */
+    font-size: 1.2rem;
+  }
+  
+  
+  .testimonial-section {
+    background-color: black;
+    color: white;
+    padding: 3rem 0;
+  }
+  
+  .testimonial-section h2 {
+    color: gold;
+    font-weight: bold;
+  }
+  
+  .testimonial-content {
+    max-width: 600px;
+    margin: auto;
+    padding: 1.5rem;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .testimonial-text {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+  
+  .testimonial-author {
+    font-weight: bold;
+    color: gold;
+  }
+  
+  /* Carousel control colors */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(100%);
+  }
+  
+  .carousel-control-prev-icon:hover,
+  .carousel-control-next-icon:hover {
+    filter: invert(50%) sepia(100%) hue-rotate(45deg) saturate(200%);
+  }
+  
+  /* Add a transition for smoother sliding effect */
+  .carousel-item {
+    transition: transform 1s ease-in-out;
+  }
+  

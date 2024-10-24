@@ -1,0 +1,37 @@
+
+
+<h2 class="text-center all-products  p-4  data-animation mb-5 mt-5">
+  All Products
+</h2>
+
+<div class="d-flex justify-content-center align-items-center items-center mb-5">
+
+  <label for="search" class="search  search  fs-3 fw-bold ps-2 pe-2 rounded-2">Search </label>
+  <input [(ngModel)]="text" type="search" class="rounded border w-75   w-2/4 px-3 py-2 my-2 border-zinc-300 ms-2">
+</div>
+
+<div class="container">
+  <div class="row gy-4 p-4  main">
+    @for (product of productList| search : text; ; track product._id) {
+
+    <div class="  col-lg-3 col-md-6 col-sm-12 parent text-center">
+      <div class="card p-2  ">
+
+        <img class="w-100" [src]="product.imageCover" [alt]="product.title" />
+        <h3 class="card-title mt-3">{{ product.category.name }}</h3>
+        <h4 class="card-text">{{ product.title.split(' ' ,2).join(' ') }}</h4>
+        <div class="flex justify-between">
+          <span>{{ product.price }} EGP</span>
+        </div>
+
+        <button (click)="addToCart(product)" class="rounded buttn w-full p-2 lable-text ">
+          Add To Cart
+        </button>
+      </div>
+
+    </div>
+    <!-- (click)="addToCart(product.id)" -->
+
+    }
+  </div>
+</div>

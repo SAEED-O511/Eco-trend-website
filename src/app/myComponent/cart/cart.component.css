@@ -1,0 +1,151 @@
+.cart-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-items-container {
+    max-height: 465px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Webkit Browsers */
+.cart-items-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.cart-items-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.cart-items-container::-webkit-scrollbar-thumb {
+    background-color: goldenrod;
+    border-radius: 10px;
+    border: 3px solid #f1f1f1;
+}
+
+.cart-items-container::-webkit-scrollbar-thumb:hover {
+    background-color: darkgoldenrod;
+}
+
+/* Firefox */
+.cart-items-container {
+    scrollbar-width: thin;
+    scrollbar-color: goldenrod #f1f1f1;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.cart-item:hover {
+    background-color: #f1f1f1;
+}
+
+.product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.cart-total {
+    margin-top: 20px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.empty-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.empty-cart-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product-image {
+        margin-bottom: 10px;
+    }
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-controls button {
+    border: 2px solid goldenrod;
+    background-color: goldenrod;
+    color: white;
+    font-size: 12px;
+    margin: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.quantity-controls button:hover {
+    background-color: goldenrod;
+    color: black;
+    border-color: black;
+}
+
+.remove-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.remove-button {
+    background-color: goldenrod;
+    border: 2px solid goldenrod;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.remove-button:hover {
+    background-color: goldenrod;
+    color: black;
+    border-color: black;
+}
+
+.remove-button i {
+    font-size: 20px;
+    color: white;
+}

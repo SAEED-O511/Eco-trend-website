@@ -1,0 +1,37 @@
+
+
+.main{
+    margin-bottom: 100px;
+    border-radius: 10px;
+
+   
+}
+.search{
+    background-color: #EDAD09;
+}
+.search:hover{
+    background-color: #FFC107;
+}
+
+.buttn{
+    background-color: #EDAD09;
+    margin-top: 20px;
+}
+.card{
+    background-color: #070707;
+    color: white;
+}
+.parent:hover{
+    transform: scale(1.2);
+  transition: all ease-in-out 1s;
+  z-index: 50;
+  cursor: pointer;
+}
+.all-products {
+    font-size: 60px;
+}
+.all-products:hover{
+    color: #EDAD09;
+    transform: scale(1.5);
+    transition: all ease-in-out 1s;
+}

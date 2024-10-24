@@ -1,0 +1,182 @@
+<div class="p-3 p-md-4 p-xl-5" id="login-component">
+  <div class="container Subscribe">
+    <div class="border border-3 border-bottom-0 border-top-0 border-dark-subtle shadow-sm  ">
+      <div class="row justify-content-md-center">
+        <hr class="border-warning-subtle mb-4">
+        <div class="col text-center h5 text-warning font-weight-bold">
+          Get updates
+        </div>
+        <hr class="border-warning-subtle mb-4">
+        <div class="col text-center h3 text-warning font-weight-bold">
+          Our Newsletter
+        </div>
+        <hr class="border-warning-subtle mb-4">
+        <div class="input-group mx-auto" style="width: 35%;">
+          <input
+            type="email"
+            class="form-control"
+            name="mail"
+            id="mail"
+            placeholder="Enter your email address"
+            [(ngModel)]="SubscribeObj.mail"
+            required
+          />
+          <button class="btn btn-warning" type="submit" (click)="onSubscribe()">Subscribe now</button>
+        </div>
+        <hr class="border-warning-subtle mb-4">
+      </div>
+    </div>
+    <hr class="border-secondary-subtle mb-4">
+    <hr class="border-warning-subtle mb-4">
+  </div>
+
+  <div class="container ">
+    <hr class="border-primary-subtle mb-4">
+    <div class="card border border-4 border-bottom-0 border-top-0 border-dark-subtle shadow-sm">
+      <div class="row g-0">
+        <div class="col-12 col-md-6 text-bg-light cardborder-light-subtle shadow-sm">
+          <div class="d-flex align-items-center justify-content-center h-100">
+            <div class="col-10 col-xl-8 py-3">
+              <img
+                class="img-fluid rounded col-md-0"
+                loading="lazy"
+                src="assets/imgGallery/logo2.png"
+                alt="Eco-trend Logo"
+              />
+              <hr class="border-primary-subtle mb-4">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="card-body p-3 p-md-4 p-xl-5">
+            <div class="row">
+              <div class="col-12">
+                <div class="mb-5">
+                  <h3 *ngIf="showLogin">Log in</h3>
+                  <h3 *ngIf="!showLogin">Sign up</h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Login Form -->
+            <form *ngIf="showLogin" action="#!">
+              <div class="row gy-3 gy-md-4 overflow-hidden">
+                <div class="col-12">
+                  <label class="form-label">Email <span class="text-danger">*</span></label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="Email"
+                    id="email"
+                    placeholder="name@example.com"
+                    [(ngModel)]="loginObj.email"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Password <span class="text-danger">*</span></label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    name="password"
+                    [(ngModel)]="loginObj.password"
+                    required
+                  />
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" name="remember_me" id="remember_me" />
+                    <label class="form-check-label text-secondary">Keep me logged in</label>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="d-grid">
+                    <button class="btn bsb-btn-xl btn-warning" type="submit" (click)="onlogin()">Log in now</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <!-- Sign Up Form -->
+            <form *ngIf="!showLogin" action="#!">
+              <div class="row gy-3 gy-md-4 overflow-hidden">
+                <div class="col-md-6">
+                  <label class="form-label">First name <span class="text-danger">*</span></label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="first-name"
+                    id="first-name"
+                    [(ngModel)]="signupObj.Firstname"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Last name <span class="text-danger">*</span></label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="last-name"
+                    id="last-name"
+                    [(ngModel)]="signupObj.lastname"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Email <span class="text-danger">*</span></label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    id="email2"
+                    placeholder="name@example.com"
+                    [(ngModel)]="signupObj.email"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Password <span class="text-danger">*</span></label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    name="password"
+                    id="password2"
+                    [(ngModel)]="signupObj.password"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <div class="d-grid">
+                    <button class="btn bsb-btn-xl btn-warning" type="submit" (click)="onsginup()">Sign up now</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <div class="row">
+              <div class="col-12">
+                <hr class="mt-5 mb-4 border-secondary-subtle">
+                <div class="d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-md-end">
+                  <a href="javascript:void(0)" class="sginup link-secondary text-decoration-none" (click)="toggleForm()">{{ showLogin ? 'Create new account' : 'Log in account' }}</a>
+                  <a href="javascript:void(0)" class="sginup Forgot link-secondary text-decoration-none" (click)="goToSignUp()">Forgot password</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal -->
+<div class="modal" *ngIf="isModalVisible">
+  <div class="modal-content">
+    <span class="close" (click)="isModalVisible = false">&times;</span>
+    <p>{{ modalMessage }}</p>
+    <button class="btn btn-warning" (click)="isModalVisible = false">OK</button>
+  </div>
+</div>

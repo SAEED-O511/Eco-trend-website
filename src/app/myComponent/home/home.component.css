@@ -1,0 +1,100 @@
+    /* Set fixed width and height for carousel items */
+    .carousel-item {
+      width: 100%; /* Adjust to desired width */
+      height: 400px; /* Set desired height */
+  }
+
+  .home-content {
+      max-width: 600px;
+      margin: auto;
+      padding: 1.5rem;
+      background-color: rgba(255, 255, 255, 0.46);
+      color: black;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      box-shadow: 0px 4px 10px rgba(230, 187, 47, 0.5);
+      border: 10px;
+  }
+
+  .detail-box h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: gold;
+      line-height: 70px;
+  }
+
+  .font {
+      font-weight: bolder;
+  }
+
+  /* .shopbutton {
+      position: relative;
+      top: 25px;
+      left: 350px;
+  } */
+
+  .f-header {
+      color: gold;
+      font-size: medium;
+      font-weight: bold;
+      font-size: 30px;
+  }
+
+  .f-paragraph {
+      font-weight: bold;
+      font-size: 25px;
+  }
+
+  /* .grid {
+      border-radius: 30px;
+      max-width: 100px;
+  } */
+
+  .grid-item {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #d4af37; /* Gold border around images */
+      box-shadow: 0px 4px 10px rgba(212, 175, 55, 0.5); /* Gold shadow */
+  }
+
+
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures equal height */
+}
+
+.gallery-item {
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 0.5s ease forwards; /* Animation */
+    animation-delay: calc(0.1s * var(--i)); /* Stagger the animations */
+}
+
+.gallery-item:hover{
+    transform: scale(1.2);
+    transition: all ease-in-out .4s;
+    z-index: 5;
+}
+
+
+/* Keyframe animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Fade in effect */
+    }
+}
+
+/* Set variable for animation delay */
+.gallery-item:nth-child(1) { --i: 0; }
+.gallery-item:nth-child(2) { --i: 1; }
+.gallery-item:nth-child(3) { --i: 2; }
+.gallery-item:nth-child(4) { --i: 3; }
+.gallery-item:nth-child(5) { --i: 4; }
+.gallery-item:nth-child(6) { --i: 5; }
+.gallery-item:nth-child(7) { --i: 6; }
+.gallery-item:nth-child(8) { --i: 7; }

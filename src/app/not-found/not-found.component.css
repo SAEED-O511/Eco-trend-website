@@ -1,0 +1,60 @@
+.container {
+    text-align: center;
+    margin: auto;
+   
+}
+
+
+p {
+
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(51, 51, 50);
+    font-size: 100px;
+    text-align: center;
+    animation: textshadow 2s ease-in-out infinite alternate;
+}
+ 
+
+.gradient {
+    background-size: 80%;
+  text-align: center;
+    margin: auto;
+   
+}
+@keyframes textshadow {
+    from {
+        background-image: linear-gradient(30deg, #cc6109 16.66%, #e49827 16.66%, #56c1f3 50.66%, #1b8ebb 50%, #f18f43 50%, #ca9229 20%, #3f4041 20.66%, #f18f43 50%, #e7b019 50%);
+
+        background-size: 100%;
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+
+    }
+
+    to {
+        background-image: linear-gradient(45deg, #1a1919 16.66%, #686765 16.66%, #0f0f0f 16.66%, #1e1e1f 40%, #0c0c0c 50%, #2c2b2c 30%, #2e2f30 30%, #020202 30%, #9b9ea3 66.66%);
+
+        background-size: 100%;
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+
+    }
+}
+
+h1 {
+    font-size: 50px;
+    color: #050505;
+    text-shadow: 2px 2px 4px goldenrod;
+}
+h4{
+    color: #050505;
+    text-shadow: 2px 2px 4px goldenrod;
+}
+button{
+    color: black;
+}
